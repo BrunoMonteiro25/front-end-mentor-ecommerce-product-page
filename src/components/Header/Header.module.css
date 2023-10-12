@@ -1,0 +1,64 @@
+@import '../../colors.css';
+
+.container {
+  border-bottom: 1px solid #e8e8e8;
+  max-width: 1109px;
+  margin: 0 auto;
+  height: 113px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: 55px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+.menu ul li a {
+  color: var(--dark-grayish-blue);
+  position: relative;
+}
+
+.menu ul li a:hover {
+  color: var(--very-dark-blue);
+}
+
+.menu ul li a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -46px;
+  width: 100%;
+  border-bottom: 4px solid var(--orange);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile .cart {
+  cursor: pointer;
+}
+
+.profile .cart:hover > svg path {
+  fill: var(--very-dark-blue);
+}
+
+.profile .avatar {
+  width: 49px;
+  height: 49px;
+  cursor: pointer;
+}
+
+.profile .avatar:hover {
+  border-radius: 50%;
+  border: 2px solid var(--orange);
+}
