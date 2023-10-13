@@ -1,15 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React from 'react'
+import React, { useState } from 'react'
 
 import styles from './Header.module.css'
 
 import Logo from '../../assets/logo.svg'
 
-import Cart from '../../assets/icon-cart.svg'
+import IconMenu from '../../assets/icon-menu.svg'
+
 import Avatar from '../../assets/image-avatar.png'
+import MenuMobile from '../MenuMobile'
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <>
       <div className={styles.container}>
@@ -35,6 +39,14 @@ const Header = () => {
           </ul>
         </div>
 
+        <div className={styles.mobile}>
+          <button onClick={() => setMobileMenuOpen(true)}>
+            <img src={IconMenu} alt="Sneakers" />
+          </button>
+
+          <img src={Logo} alt="Sneakers" />
+        </div>
+
         <div className={styles.profile}>
           <div className={styles.cart}>
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -49,6 +61,11 @@ const Header = () => {
           <img src={Avatar} alt="Avatar" className={styles.avatar} />
         </div>
       </div>
+
+      <MenuMobile
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+      />
     </>
   )
 }

@@ -62,3 +62,42 @@
   border-radius: 50%;
   border: 2px solid var(--orange);
 }
+
+.mobile {
+  display: none;
+}
+
+.mobile button {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1109px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 775px) {
+  .container {
+    border: none;
+    /* border: 1px solid black; */
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .mobile {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
