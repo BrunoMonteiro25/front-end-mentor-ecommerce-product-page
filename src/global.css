@@ -15,4 +15,5 @@ li {
 body {
   /* background-color: #ccc; */
   font-family: 'Kumbh Sans', sans-serif;
+  overflow-x: hidden;
 }

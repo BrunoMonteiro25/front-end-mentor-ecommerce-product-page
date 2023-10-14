@@ -23,6 +23,12 @@ const Product = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.container_images_550px}>
+        <div className={styles.image_principal_550px}>
+          <img src={mainImage} alt="Product" />
+        </div>
+      </div>
+
       <div className={styles.containerImages}>
         <div className={styles.imagePrincipal}>
           <img src={mainImage} alt="Product" />
@@ -73,6 +79,10 @@ const Product = () => {
 
           <div className={styles.discount}>
             <p>50%</p>
+          </div>
+
+          <div className={styles.price_550px}>
+            <p>$250.00</p>
           </div>
         </div>
 
